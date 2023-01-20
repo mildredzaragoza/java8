@@ -1,9 +1,15 @@
 package com.aspire.java8tester;
 
+/**
+ * Class to test lambda expression
+ * @author Mildred Zaragoza
+ *
+ */
 public class LambdaExpression {
 	public static void main(String args[]) {
 		LambdaExpression tester = new LambdaExpression();
 		
+		//Different syntax for lambda expression
 		MathOperation addition = (int a, int b) -> a + b;
 		MathOperation subtraction = (a,b) -> a - b;
 		MathOperation multiplication = (a,b) -> { return a*b; };
@@ -15,6 +21,9 @@ public class LambdaExpression {
 	    System.out.println("10 / 5 = " + tester.operate(10, 5, division));
 	}
 	
+	/*
+	 * Functional interface
+	 */
 	interface MathOperation {
 		int operation(int a, int b);
 	}
